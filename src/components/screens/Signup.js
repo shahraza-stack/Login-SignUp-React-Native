@@ -37,7 +37,7 @@ export default function Signup() {
             secureTextEntry={true}
           />
         </View>
-        <Text style={button1}>Login</Text>
+        <Text style={button1}>Signup</Text>
       </View>
     </View>
   );
