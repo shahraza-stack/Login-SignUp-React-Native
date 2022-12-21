@@ -2,8 +2,16 @@ import { StyleSheet, Image, Text, View, TextInput } from "react-native";
 import React from "react";
 import pattern from "../../../assets/pattern.jpg";
 import logo from "../../../assets/logo.png";
-import { button1 } from "../../common/button";
-import { head1, head2 } from "../../common/formcss";
+import button, { button1 } from "../../common/button";
+import {
+  formgroup,
+  head1,
+  head2,
+  input,
+  label,
+  link,
+  link2,
+} from "../../common/formcss";
 
 export default function Login() {
   return (
@@ -16,10 +24,23 @@ export default function Login() {
       <View style={styles.s2}>
         <Text style={head1}>Login</Text>
         <Text style={head2}>Sign in to continue</Text>
-        <View style={styles.formgroup}>
-          <Text style={styles.label}>Email</Text>
-          <TextInput />
+        <View style={formgroup}>
+          <Text style={label}>Email</Text>
+          <TextInput style={input} placeholder="abc@xyz.com" />
+          <Text style={label}>Password</Text>
+          <TextInput
+            style={input}
+            placeholder="********"
+            secureTextEntry={true}
+          />
         </View>
+        <View style={styles.fp}>
+          <Text style={link}>Forgot Password?</Text>
+        </View>
+        <Text style={button1}>Login</Text>
+        <Text>
+          Don't have an account <Text style={link2}>Create an account?</Text>
+        </Text>
       </View>
     </View>
   );
@@ -61,7 +82,7 @@ const styles = StyleSheet.create({
     //fontSize: 15,
     alignItems: "center",
     justifyContent: "center",
-    height: "40%",
+    height: "45%",
     width: "100%",
   },
   s2: {
@@ -89,20 +110,10 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize: 20,
   },
-  formgroup: {
+  fp: {
     display: "flex",
-    flexDirection: "column",
-    widht: "100%",
-    marginVertical: 10,
-  },
-  label: {
-    fontSize: 17,
-    marginLeft: 10,
-    marginBottom: 5,
-  },
-  input: {
-    backgroundColor: "#D9D9D9",
-    // borderRadius: 5,
-    padding: 15,
+    alignItems: "flex-end",
+    marginVertical: 5,
+    marginHorizontal: 15,
   },
 });
