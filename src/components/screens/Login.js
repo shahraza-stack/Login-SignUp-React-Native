@@ -17,9 +17,9 @@ export default function Login() {
   return (
     <View style={styles.container1}>
       <View style={styles.s1}>
-        {/* <Image style={styles.logo} source={logo} /> */}
-        <Text style={styles.h1}> Shah </Text>
-        <Text style={styles.h2}>Polishing Skills..</Text>
+        <Image style={styles.logo} source={logo} />
+        {/* <Text style={styles.h1}> Shah </Text>
+        <Text style={styles.h2}>Polishing Skills..</Text> */}
       </View>
       <View style={styles.s2}>
         <Text style={head1}>Login</Text>
@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
   //   width: "100%",
   // },
   logo: {
-    height: "200",
+    height: "80%",
+    resizeMode: "contain",
   },
   container1: {
     display: "flex",

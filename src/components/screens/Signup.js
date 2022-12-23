@@ -17,9 +17,7 @@ export default function Signup() {
   return (
     <View style={styles.container1}>
       <View style={styles.s1}>
-        {/* <Image style={styles.logo} source={logo} />
-        <Text style={styles.h1}> Shah </Text>
-        <Text style={styles.h2}>Polishing Skills..</Text> */}
+        <Image style={styles.logo} source={logo} />
       </View>
       <View style={styles.s2}>
         <Text style={head1}>Create new Account</Text>
@@ -28,9 +26,19 @@ export default function Signup() {
           <Text style={link}>Login here</Text>
         </Text>
         <View style={formgroup}>
+          <Text style={label}>First Name</Text>
+          <TextInput style={input} placeholder="John" />
+          <Text style={label}>Last Name</Text>
+          <TextInput style={input} placeholder="Walter" />
           <Text style={label}>Email</Text>
           <TextInput style={input} placeholder="abc@xyz.com" />
           <Text style={label}>Password</Text>
+          <TextInput
+            style={input}
+            placeholder="********"
+            secureTextEntry={true}
+          />
+          <Text style={label}>Confirm Password</Text>
           <TextInput
             style={input}
             placeholder="********"
@@ -64,7 +72,8 @@ const styles = StyleSheet.create({
   //   width: "100%",
   // },
   logo: {
-    height: "200",
+    height: "80%",
+    resizeMode: "contain",
   },
   container1: {
     display: "flex",
@@ -86,7 +95,7 @@ const styles = StyleSheet.create({
     display: "flex",
     backgroundColor: "white",
     width: "100%",
-    height: "80%",
+    height: "75%",
     textAlign: "center",
     // justifyContent: "center",
     // alignItem: "centre",
