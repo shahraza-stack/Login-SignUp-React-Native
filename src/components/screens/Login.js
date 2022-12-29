@@ -1,6 +1,5 @@
 import { StyleSheet, Image, Text, View, TextInput } from "react-native";
 import React from "react";
-import pattern from "../../../assets/pattern.jpg";
 import logo from "../../../assets/logo.png";
 import button, { button1 } from "../../common/button";
 import {
@@ -14,6 +13,8 @@ import {
 } from "../../common/formcss";
 
 export default function Login() {
+  // class Login extends React.Component {
+  //   render() {
   return (
     <View style={styles.container1}>
       <View style={styles.s1}>
@@ -45,6 +46,7 @@ export default function Login() {
     </View>
   );
 }
+// }
 
 const styles = StyleSheet.create({
   // container: {
